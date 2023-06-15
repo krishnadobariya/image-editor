@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;500;600;700;800;900&display=swap');
+
+/* ImageEditor container */
+.image-editor-container {
+    display: flex;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  /* Canvas */
+  .canvas {
+    flex: 3;
+    margin-top: 20px;
+    min-height: 300px;
+    position: relative;
+    width: 600px;
+    height: 90vh;
+    margin-right: 30px;
+    border-radius: 50px;
+    border-radius: 50px;
+    border-radius: 50px;
+    background: linear-gradient(225deg, #696969, #7d7d7d);
+    box-shadow:  -20px 20px 60px #636363,
+                 20px -20px 60px #878787;
+  }
+  
+  /* Component */
+  .component {
+    margin-bottom: 20px;
+  }
+  
+  /* Canvas element */
+  .canvas-element {
+    position: absolute;
+  }
+  
+  /* Buttons */
+  button {
+    margin-top: 20px;
+    color: black;
+    border: none;
+    padding: 8px;
+    border-radius: 11px;
+    background: linear-gradient(315deg, #757575, #8b8b8b);
+    box-shadow: -20px -20px 60px #6f6f6f, 20px 20px 60px #969696;
+
+  }
+  
+  /* Sidebar image */
+  .sidebar-image {
+    max-width: 100%;
+  }
+  
+  /* Save button */
+  .saveButton {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+  }
+  
+  /* Image component container */
+  .image-component-container {
+    max-height: 200px;
+    overflow-y: auto;
+    padding-top: 20px;
+  }
+
+/* image editing */
+.canvas-element {
+  position: absolute;
+  display: inline-block;
+  cursor: move;
+  user-select: none;
+  z-index: 1;
+ 
+}
+
+.resize-handle {
+  position: absolute;
+  background-color: white;
+  border: 1px solid black;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.top-left {
+  top: -4px;
+  left: -4px;
+}
+
+.top-right {
+  top: -4px;
+  right: -4px;
+}
+
+.bottom-left {
+  bottom: -4px;
+  left: -4px;
+}
+
+.bottom-right {
+  bottom: -4px;
+  right: -4px;
+}
+
+.canvas-element-actions {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+  }
+  
+  .canvas-element:hover .canvas-element-actions {
+    display: flex;
+    gap: 5px;
+
+  }
+  
+  .canvas-element-actions button {
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+  }
+  
+
+  .sidebar h2, .component h2{
+    border-bottom: 1px solid black;
+  }
+
+  /* resize */
+  .canvas-element {
+    position: absolute;
+    display: inline-block;
+    cursor: move;
+    user-select: none;
+    z-index: 1;
+    resize: both; /* Enable resizing */
+    overflow: hidden; /* Hide overflowing content when resizing */
+  }
+  
+  .resize-handle {
+    position: absolute;
+    background-color: white;
+    border: 1px solid black;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .top-left {
+    top: -4px;
+    left: -4px;
+    cursor: nwse-resize; /* Set cursor for top-left handle */
+  }
+  
+  .top-right {
+    top: -4px;
+    right: -4px;
+    cursor: nesw-resize; /* Set cursor for top-right handle */
+  }
+  
+  .bottom-left {
+    bottom: -4px;
+    left: -4px;
+    cursor: nesw-resize; /* Set cursor for bottom-left handle */
+  }
+  
+  .bottom-right {
+    bottom: -4px;
+    right: -4px;
+    cursor: nwse-resize; /* Set cursor for bottom-right handle */
+  }
+  .image-component-container::-webkit-scrollbar {
+    width: 10px; /* Width of the vertical scrollbar */
+  }

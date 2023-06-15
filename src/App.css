@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap');
+*{
+    font-family: 'Playfair Display', serif;
+    background-color: #828282;
+    color: #454545;
+}
